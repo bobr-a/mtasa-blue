@@ -51,6 +51,9 @@ int WINAPI DllMain(HINSTANCE hModule, DWORD dwReason, PVOID pvNothing)
 
             FileTranslator.GetGTARootDirectory(WorkingDirectory);
             SetCurrentDirectory(WorkingDirectory.c_str());
+
+            // Load the FLA
+            LoadLibraryA("$fastman92limitAdjuster.asi");
         }
     }
     else if (dwReason == DLL_PROCESS_DETACH)
